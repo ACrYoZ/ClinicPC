@@ -1,0 +1,36 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Clinic">
+
+    <Style x:Key="WindowsStyle" TargetType="Window">
+        <Setter Property="Background" Value="White"/>
+    </Style>
+    <Style x:Key="MenuStyle" TargetType="Menu">
+        <Setter Property="Background" Value="White"/>
+    </Style>
+    <Style x:Key="MenuItem_Windows" TargetType="MenuItem">
+        <Setter Property="Background" Value="#00FFFFFF"/>
+        <Setter Property="BorderBrush" Value="#00FFFFFF"/>
+    </Style>
+
+    <Style x:Key="DataGrid" TargetType="DataGrid">
+        <Setter Property="RowBackground" Value="White"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="ColumnHeaderStyle" Value="{DynamicResource DGCHeaderStyle}"/>
+        <Setter Property="CellStyle" Value="{DynamicResource Cell}"/>
+    </Style>
+
+    <Style x:Key="DGCHeaderStyle" TargetType="DataGridColumnHeader">
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Foreground" Value="Black"/>
+    </Style>
+
+
+    <Style x:Key="StatusBar" TargetType="StatusBar">
+        <Setter Property="Background" Value="#FFF1EDED"/>
+        <Setter Property="Foreground" Value="Black"/>
+    </Style>
+
+
+
+</ResourceDictionary>

@@ -1,0 +1,34 @@
+﻿<Window x:Class="Clinic.DiagnosisUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Clinic"
+        mc:Ignorable="d" Height="600" Width="800" Title="Диагностика пациентов" Loaded="Window_Loaded" Icon="image/icon.png" WindowStartupLocation="CenterScreen" MaxHeight="600" MaxWidth="800" MinHeight="600" MinWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition Width="183*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <DataGrid AutoGenerateColumns="False" x:Name="DiagnosisGrid" IsReadOnly="True" Background="#FFE2E2E2"  Margin="0,0,0,47" FontFamily="/Clinic;component/Fonts/#Gotham Pro" FontSize="16" Grid.ColumnSpan="2" MouseDoubleClick="DiagnosisGrid_MouseDoubleClick" >
+            <DataGrid.Resources>
+                <DataTemplate x:Key="CustomHeaderTemplate">
+                    <StackPanel>
+                        <TextBlock Text="{Binding Name}" />
+                    </StackPanel>
+                </DataTemplate>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Patient}" Header="Пациент " Width="200"/>
+                <DataGridTextColumn Binding="{Binding diagnosis}" Header="Диагноз" Width="*"/>
+                <DataGridTextColumn Binding="{Binding medication}" Header="Лечение" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="Btn_Back" Content="Назад" HorizontalAlignment="Left" Margin="112,520,0,0" VerticalAlignment="Top" Width="148" FontSize="16" FontFamily="/Clinic;component/Fonts/#Gotham Pro" Height="38" Click="Btn_Back_Click" Grid.Column="1"/>
+
+    </Grid>
+</Window>

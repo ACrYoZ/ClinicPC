@@ -1,0 +1,15 @@
+﻿<Window x:Class="Clinic.Verification"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Clinic"
+        mc:Ignorable="d"
+        Title="Подтверждение" Height="135" Width="300" Icon="image/icon.png" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="28" Margin="87,23,0,0" TextWrapping="Wrap" Text="Принять заявку?" FontSize="14" VerticalAlignment="Top" Width="150" FontFamily="/Clinic;component/Fonts/#Gotham Pro"/>
+        <Button x:Name="Btn_Yes" Content="Да" HorizontalAlignment="Left" Height="22" Margin="51,67,0,0" VerticalAlignment="Top" Width="73" FontFamily="/Clinic;component/Fonts/#Gotham Pro" Click="Btn_Yes_Click"/>
+        <Button x:Name="Btn_Back" Content="Назад" HorizontalAlignment="Left" Height="22" Margin="164,67,0,0" VerticalAlignment="Top" Width="73" FontFamily="/Clinic;component/Fonts/#Gotham Pro" Click="Btn_Back_Click"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,42 @@
+﻿<Window x:Class="Clinic.UserRequest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Clinic"
+        mc:Ignorable="d"
+        Title="Заявки" Height="650" Width="1080" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Icon="image/icon.png" MaxHeight="650" MinHeight="650" MaxWidth="1080" MinWidth="1080">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <DataGrid AutoGenerateColumns="False" x:Name="RegisterGrid" IsReadOnly="True" Background="#FFE2E2E2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,47" FontFamily="/Clinic;component/Fonts/#Gotham Pro" FontSize="16" MouseDoubleClick="RegisterGrid_MouseDoubleClick">
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem x:Name="Mi_accept" Header="Принять заявку" Click="Mi_accept_Click" />
+                    <MenuItem x:Name="Mi_reject" Header="Отклонить заявку" Click="Mi_reject_Click"  />
+                    <MenuItem Command="Copy" Header="Скопировать" />
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+            <DataGrid.Resources>
+                <DataTemplate x:Key="CustomHeaderTemplate">
+                    <StackPanel>
+                        <TextBlock Text="{Binding Name}" />
+                    </StackPanel>
+                </DataTemplate>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding date_v2}" Header="Дата и время" Width="175"/>
+                <DataGridTextColumn Binding="{Binding patientName}" Header="Пациент" Width="*"/>
+                <DataGridTextColumn Binding="{Binding passportNumber}" Header="Паспорт пациента" Width="*"/>
+                <DataGridTextColumn Binding="{Binding doctorName}" Header="Доктор" Width="*"/>
+                <DataGridTextColumn Binding="{Binding position}" Header="Должность" Width="*"/>
+                <DataGridTextColumn Binding="{Binding parlor}" Header="Кабинет" Width="80"/>
+                <DataGridTextColumn Binding="{Binding annotation}" Header="Аннотация" Width="*"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="Btn_Close" Content="Закрыть" Margin="440,567,440,9" FontFamily="/Clinic;component/Fonts/#Gotham Pro" Click="Btn_Close_Click" FontSize="16"/>
+    </Grid>
+</Window>

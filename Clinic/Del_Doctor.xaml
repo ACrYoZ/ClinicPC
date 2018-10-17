@@ -1,0 +1,19 @@
+﻿<Window x:Class="Clinic.Del_Doctor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Clinic"
+        mc:Ignorable="d" Height="200" Width="350" WindowStartupLocation="CenterScreen" Title="Удалить" Icon="image/icon.png">
+    <Grid>
+        <TextBox x:Name="Tb_PassportNumber" HorizontalAlignment="Left" Height="24" Margin="77,76,0,0" TextWrapping="Wrap" Text="
+" VerticalAlignment="Top" Width="186" FontSize="14" FontFamily="/Clinic;component/Fonts/#Gotham Pro"/>
+        <Button x:Name="Btn_Del" Content="Удалить" HorizontalAlignment="Left" Height="21" Margin="77,130,0,0" VerticalAlignment="Top" Width="74" FontFamily="/Clinic;component/Fonts/#Gotham Pro" Click="Btn_Del_Click"/>
+        <Button x:Name="Btn_Back" Content="Назад" HorizontalAlignment="Left" Height="21" Margin="189,130,0,0" VerticalAlignment="Top" Width="74" FontFamily="/Clinic;component/Fonts/#Gotham Pro" Click="Btn_Back_Click"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="7,36,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="16" FontFamily="/Clinic;component/Fonts/#Gotham Pro" Width="332" Height="40">
+         Введите номер паспорта для удаления
+        </TextBlock>
+
+
+    </Grid>
+</Window>

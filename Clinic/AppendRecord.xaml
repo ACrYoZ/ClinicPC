@@ -1,0 +1,35 @@
+﻿<Window x:Class="Clinic.AppendRecord"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Clinic"
+        mc:Ignorable="d"
+        Title="Запись " Height="500" Width="680" WindowStartupLocation="CenterScreen" BorderThickness="1" Loaded="Window_Loaded" MinHeight="500" MinWidth="680" MaxWidth="680" MaxHeight="500" Icon="image/icon.png">
+    <Grid Background="White">
+        <Label x:Name="Lb_Patient" Content="Пациент" HorizontalAlignment="Left" Margin="49,23,0,0" VerticalAlignment="Top" FontSize="22" FontFamily="/Clinic;component/Fonts/#Gotham Pro"/>
+        <TextBox x:Name="Tb_Patient" HorizontalAlignment="Left" Height="30" Margin="301,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="325" FontSize="18" BorderThickness="1" BorderBrush="Black" FontFamily="/Clinic;component/Fonts/#Gotham Pro"/>
+        <Button x:Name="Record" Content="Запись" HorizontalAlignment="Left" Height="32" Margin="210,394,0,0" VerticalAlignment="Top" Width="110" FontSize="18" Click="Record_Click" FontFamily="/Clinic;component/Fonts/#Gotham Pro"/>
+        <Button x:Name="Exit" Content="Назад" HorizontalAlignment="Left" Height="32" Margin="349,394,0,0" VerticalAlignment="Top" Width="110" FontSize="18" Click="Exit_Click" FontFamily="/Clinic;component/Fonts/#Gotham Pro"/>
+        <Label x:Name="Lb_Diagnos" Content="Диагноз" HorizontalAlignment="Left" Margin="49,130,0,0" VerticalAlignment="Top" FontSize="22" FontFamily="/Clinic;component/Fonts/#Gotham Pro"/>
+        <TextBox x:Name="Tb_Diagnos" HorizontalAlignment="Left" Height="62" Margin="301,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="325" FontSize="18" BorderThickness="1" BorderBrush="Black" FontFamily="/Clinic;component/Fonts/#Gotham Pro"/>
+        <Label x:Name="Lb_Medication" Content="Назначение лечения" HorizontalAlignment="Left" Margin="49,213,0,0" VerticalAlignment="Top" FontSize="22" FontFamily="/Clinic;component/Fonts/#Gotham Pro"/>
+        <TextBox x:Name="Tb_Medication" HorizontalAlignment="Left" Height="62" Margin="301,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="325" FontSize="18" BorderThickness="1" BorderBrush="Black" FontFamily="/Clinic;component/Fonts/#Gotham Pro"/>
+        <Label x:Name="Lb_Medication_Copy" Content="Явился на прием" HorizontalAlignment="Left" Margin="49,294,0,0" VerticalAlignment="Top" FontSize="22" FontFamily="/Clinic;component/Fonts/#Gotham Pro"/>
+        <Label x:Name="label" Content="Дата и время" HorizontalAlignment="Left" Margin="49,76,0,0" VerticalAlignment="Top" FontSize="22" FontFamily="/Clinic;component/Fonts/#Gotham Pro"/>
+        <TextBox x:Name="Tb_Date" HorizontalAlignment="Left" Height="30" Margin="301,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="325" FontSize="18" BorderThickness="1" BorderBrush="Black" FontFamily="/Clinic;component/Fonts/#Gotham Pro"/>
+
+        <RadioButton x:Name="Rb_Yes" GroupName="YesNo" Content="Да" HorizontalAlignment="Left" Margin="302,300,0,0" VerticalAlignment="Top" FontFamily="/Clinic;component/Fonts/#Gotham Pro">
+            <RadioButton.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2" />
+            </RadioButton.LayoutTransform>
+        </RadioButton>
+
+        <RadioButton x:Name="Rb_No" GroupName="YesNo" Content="Нет" HorizontalAlignment="Left" Margin="404,300,0,0" VerticalAlignment="Top" FontFamily="/Clinic;component/Fonts/#Gotham Pro">
+            <RadioButton.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2" />
+            </RadioButton.LayoutTransform>
+        </RadioButton>
+
+    </Grid>
+</Window>

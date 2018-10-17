@@ -1,0 +1,34 @@
+﻿<Window x:Class="Clinic.MainWindows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Clinic"
+        mc:Ignorable="d"
+        Title="myClinic" Height="470" Width="600" WindowStartupLocation="CenterScreen" BorderBrush="Black" BorderThickness="0" MinWidth="600" MaxWidth="600" MinHeight="470" MaxHeight="470" Icon="image/icon.png" >
+
+    <Window.Background>
+        <ImageBrush ImageSource="image/MyBackground.jpg"/>
+    </Window.Background>
+
+    <Grid Name="grid" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="439*"/>
+            <ColumnDefinition Width="153*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="Tb_Mail" Height="29" Margin="172,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" BorderThickness="2" BorderBrush="#FFAEAEAE" FontFamily="/Clinic;component/Fonts/#Gotham Pro" FontSize="16"/>
+        <PasswordBox x:Name="Tb_Password" Height="29" Margin="172,259,0,0" VerticalAlignment="Top" BorderThickness="2" BorderBrush="#FFAEAEAE" FontFamily="/Clinic;component/Fonts/#Gotham Pro" FontSize="16"/>
+        <Label x:Name="label_Mail" Content="Почта" HorizontalAlignment="Left" Margin="85,222,0,0" VerticalAlignment="Top" FontSize="16" Height="29" Width="67" FontFamily="/Clinic;component/Fonts/#Gotham Pro"/>
+        <Label x:Name="label_Password" Content="Пароль" HorizontalAlignment="Left" Margin="85,259,0,0" VerticalAlignment="Top" FontSize="16" Height="29" Width="79" FontFamily="/Clinic;component/Fonts/#Gotham Pro"/>
+
+        <Button x:Name="Btn_Enter" Content="Войти" HorizontalAlignment="Left" Margin="252,318,0,0" VerticalAlignment="Top" Width="100" Height="35" Click="Btn_Enter_Click" FontFamily="/Clinic;component/Fonts/#Gotham Pro" Background="#FFE0E0E0" FontSize="14" BorderBrush="#FF9E9E9E" IsDefault="True" BorderThickness="2"/>
+
+        <TextBox x:Name="Tb_RegistryName" HorizontalAlignment="Left" Height="23" Margin="150,93,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Visibility="Collapsed"/>
+        <TextBox x:Name="Tb_RegistrySurname" HorizontalAlignment="Left" Height="23" Margin="150,124,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Visibility="Collapsed"/>
+        <TextBox x:Name="Tb_RegistryPatronymic" HorizontalAlignment="Left" Height="23" Margin="150,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Visibility="Collapsed"/>
+        <TextBox x:Name="Tb_RegistryPhoneNumber" HorizontalAlignment="Left" Height="23" Margin="150,196,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Visibility="Collapsed"/>
+        <TextBox x:Name="Tb_RegistryPassportNumber" HorizontalAlignment="Left" Height="23" Margin="150,226,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Visibility="Collapsed"/>
+
+    </Grid>
+</Window>
